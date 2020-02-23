@@ -1,7 +1,36 @@
 #include <iostream>
+#include <chrono>
 
-int main(int argc, char** argv)
+using namespace std;
+using namespace chrono;
+
+int64_t NS_PER_UPDATE = 1.0 / 60.0 * 1000000;
+
+int main()
 {
-    std::cout << "Hello world!\n";
+    time_point  current = steady_clock::now(),
+                previous = steady_clock::now();
+
+    duration    elapsed = current - previous;
+
+    int64_t     lag = 0.0;
+
+    while (true) {
+        current = steady_clock::now();
+        elapsed = current - previous;
+        previous = current;
+        lag += elapsed.count();
+
+        // process input(s)
+
+        // keep the update interval constant
+        while (lag >= NS_PER_UPDATE) {
+            // update physics & stuff
+            lag -= NS_PER_UPDATE;
+        }
+
+        // render dynamically
+    }
+
     return 0;
 }
