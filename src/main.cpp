@@ -7,10 +7,10 @@ int64_t NS_PER_UPDATE = 1.0 / 90.0 * 1000000;
 
 int main()
 {
-    time_point  current = steady_clock::now(),
-                previous = steady_clock::now();
+    time_point<steady_clock>    current,
+                                previous = steady_clock::now();
 
-    duration    elapsed = current - previous;
+    duration<int64_t, nano> elapsed;
 
     int64_t     lag = 0.0;
 
