@@ -1,10 +1,9 @@
-#include <iostream>
 #include <chrono>
 
 using namespace std;
 using namespace chrono;
 
-int64_t NS_PER_UPDATE = 1.0 / 60.0 * 1000000;
+int64_t NS_PER_UPDATE = 1.0 / 90.0 * 1000000;
 
 int main()
 {
