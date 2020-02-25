@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Executable name to be built
-add_executable(semseterser src/main.cpp)
+add_executable(semseterser src/main.cpp src/game.cpp)
 
 # Compiler options per platform
 if(MSVC)
