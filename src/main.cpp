@@ -2,8 +2,8 @@
 
 int main()
 {
-    Game* game = new Game(90);
-    game->start();
+  semseterser::Game* game = new semseterser::Game();
+  game->start();
 
-    return 0;
+  return 0;
 }

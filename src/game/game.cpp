@@ -1,28 +1,25 @@
 #include "game.hpp"
 
-using namespace std;
-using namespace chrono;
+namespace chrono = std::chrono;
 
-Game::Game(int64_t updatesPerSecond)
-{
-  this->updatesPerSec = updatesPerSecond;
-}
+semseterser::Game::Game() : updatesPerSec{90} {}
 
-Game::~Game()
+semseterser::Game::Game(int64_t updatesPerSecond)
+  : updatesPerSec{updatesPerSecond}
 {}
 
-void Game::start()
+void semseterser::Game::start()
 {
   int64_t nsPerUpdate = 1.0 / this->updatesPerSec * 1000000;
-  time_point<steady_clock>    current,
-                              previous = steady_clock::now();
+  chrono::time_point<chrono::steady_clock>    current,
+                              previous = chrono::steady_clock::now();
 
-  duration<int64_t, nano> elapsed;
+  chrono::duration<int64_t, std::nano> elapsed;
 
   int64_t     lag = 0.0;
 
   while (true) {
-      current = steady_clock::now();
+      current = chrono::steady_clock::now();
       elapsed = current - previous;
       previous = current;
       lag += elapsed.count();

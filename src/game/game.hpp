@@ -3,14 +3,16 @@
 
 #include <chrono>
 
-class Game {
-  private:
-    int64_t updatesPerSec;
+namespace semseterser {
+  class Game {
+    private:
+      int64_t updatesPerSec;
 
-  public:
-    Game(int64_t updatesPerSecond);
-    ~Game();
-    void start();
-};
+    public:
+      Game();
+      Game(int64_t updatesPerSecond);
+      void start();
+  };
+}
 
 #endif /* GAME_HPP */
