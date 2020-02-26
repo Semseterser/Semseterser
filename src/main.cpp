@@ -1,7 +1,9 @@
-#include <iostream>
+#include "game/game.hpp"
 
-int main(int argc, char** argv)
+int main()
 {
-    std::cout << "Hello world!\n";
-    return 0;
+  semseterser::Game* game = new semseterser::Game();
+  game->start();
+
+  return 0;
 }

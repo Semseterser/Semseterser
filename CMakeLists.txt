@@ -6,8 +6,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+file(GLOB semseterser_src
+    RELATIVE ${PROJECT_SOURCE_DIR}
+    "src/main.cpp"
+    "src/game/*.cpp"
+)
+
 # Executable name to be built
-add_executable(semseterser src/main.cpp)
+add_executable(semseterser ${semseterser_src})
 
 # Compiler options per platform
 if(MSVC)
