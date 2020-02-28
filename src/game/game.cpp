@@ -14,7 +14,7 @@ void semseterser::Game::start()
   chrono::time_point<chrono::steady_clock>    current,
                               previous = chrono::steady_clock::now();
 
-  chrono::duration<int64_t, std::nano> elapsed;
+  chrono::duration<int64_t, std::nano> elapsed{};
 
   int64_t     lag = 0.0;
 

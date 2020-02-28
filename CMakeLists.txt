@@ -5,6 +5,7 @@ project(semseterser)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
 file(GLOB semseterser_src
     RELATIVE ${PROJECT_SOURCE_DIR}

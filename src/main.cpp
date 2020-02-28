@@ -2,7 +2,7 @@
 
 int main()
 {
-  semseterser::Game* game = new semseterser::Game();
+  auto game = new semseterser::Game();
   game->start();
 
   return 0;

@@ -12,6 +12,5 @@ script:
   - export CC=gcc-7
   - export CXX=g++-7
   - mkdir build && cd build
-  - cmake ..
-  - make tester && ./semseterser_test
-  - make
+  - cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+  - make && ./semseterser_test
