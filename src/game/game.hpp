@@ -1,5 +1,5 @@
-#ifndef GAME_HPP
-#define GAME_HPP
+#ifndef SEMSETERSER_GAME_HPP
+#define SEMSETERSER_GAME_HPP
 
 #include <chrono>
 
@@ -10,9 +10,9 @@ namespace semseterser {
 
     public:
       Game();
-      Game(int64_t updatesPerSecond);
+      explicit Game(int64_t updatesPerSecond);
       void start();
   };
-}
+}  // namespace semseterser
 
-#endif /* GAME_HPP */
+#endif /* SEMSETERSER_GAME_HPP */

@@ -1,0 +1,2 @@
+Checks: "-*,clang-analyzer-*,google-*,hicpp-*,modernize-*,performance-*,readability-*,cert-*,bugprone-*,misc-*,fuchsia-*"
+WarningsAsErrors: "-*,clang-analyzer-*,google-*,hicpp-*,modernize-*,performance-*,readability-*,cert-*,bugprone-*,misc-*,fuchsia-*"
