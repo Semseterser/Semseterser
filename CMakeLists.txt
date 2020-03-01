@@ -5,13 +5,14 @@ project(semseterser)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
 file(GLOB semseterser_src
     RELATIVE ${PROJECT_SOURCE_DIR}
     "src/main.cpp"
     "src/game/*.cpp"
 )
+
+set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 
 # Executable name to be built
 add_executable(semseterser ${semseterser_src})
@@ -22,6 +23,8 @@ if(MSVC)
 else()
     target_compile_options(semseterser PRIVATE -Wall -Wextra -Wpedantic -O2)
 endif()
+
+unset(CMAKE_CXX_CLANG_TIDY)
 
 # Enable running ctest
 enable_testing()
